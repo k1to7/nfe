@@ -1,0 +1,7 @@
+{
+  "name": "mnfse",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
