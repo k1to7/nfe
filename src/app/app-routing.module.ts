@@ -19,6 +19,39 @@ const routes: Routes = [
     path: 'usuario-listar',
     loadChildren: () => import('./usuario-listar/usuario-listar.module').then( m => m.UsuarioListarPageModule)
   },
+  {
+    path: 'categoria',
+    loadChildren: () => import('./categoria/categoria.module').then( m => m.CategoriaPageModule)
+  },
+  {
+    path: 'cadastrar-nfse',
+    loadChildren: () => import('./cadastrar-nfse/cadastrar-nfse.module').then( m => m.CadastrarNfsePageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+  },
+  {
+    path: 'esqueci',
+    loadChildren: () => import('./esqueci/esqueci.module').then( m => m.EsqueciPageModule)
+  },
+  {
+    path: 'resultado',
+    loadChildren: () => import('./resultado/resultado.module').then( m => m.ResultadoPageModule)
+  },
+  {
+    path: 'consulta',
+    loadChildren: () => import('./consulta/consulta.module').then( m => m.ConsultaPageModule)
+  },
+  {
+    path: 'pendente',
+    loadChildren: () => import('./pendente/pendente.module').then( m => m.PendentePageModule)
+  },
+
 ];
 
 @NgModule({

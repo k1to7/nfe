@@ -1,27 +1,44 @@
-#container {
-  text-align: center;
+/* src/app/index/index.component.scss */
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+  ion-header {
+    ion-toolbar {
+      --background: #2c3e50; /* Cor de fundo do cabeçalho */
+      --color: #ecf0f1; /* Cor do texto do cabeçalho */
+    }
+  }
 
-  color: #8c8c8c;
+  ion-content {
+    --background: #ecf0f1; /* Cor de fundo do conteúdo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    align-self: center;
+    
+  }
 
-  margin: 0;
-}
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    vertical-align: auto;
+    ;
+    width: 100%;
+  }
 
-#container a {
-  text-decoration: none;
-}
+  ion-button {
+    margin: 10px 0;
+    border-radius: 10px; /* Borda arredondada nos botões */
+    font-weight: bold;
+    width: 40%; /* Define a largura dos botões, ajuste conforme necessário */
+  }
+
+
+  
+
+
+
