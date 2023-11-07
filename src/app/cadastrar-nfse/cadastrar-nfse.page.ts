@@ -14,7 +14,7 @@ export class CadastrarNfsePage implements OnInit {
   public cpnj: number= 0;
   public cidade: string= '';
   public uf: string = '';
-
+  public datahora:string ='';
 
 
   public descricaoItem1: string = '';
