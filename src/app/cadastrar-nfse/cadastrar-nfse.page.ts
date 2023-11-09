@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Data } from '@angular/router';
+import { RequisicaoService } from '../service/requisicao.service';
 
 @Component({
   selector: 'app-cadastrar-nfse',
@@ -15,7 +16,27 @@ export class CadastrarNfsePage implements OnInit {
   public cidade: string= '';
   public uf: string = '';
   public datahora:string ='';
+  public endereco:string= '';
+  public municipio:string='';
+  public inscricaomunicipal:string='';
+  public rns:string='';
+  public discriminacao:string = '';
+  public texto: string= '';
+  public email: string='';
 
+  public inss:number = 0;
+  public irrf:number = 0;
+  public cssl:number= 0;
+  public confins:number= 0;
+  public pis_pasep:number= 0;
+  public codigo_serviço:number= 0;
+  public total_deduçoes:number= 0;
+  public base_calculo: number = 0;
+  public aliquota:number= 0;
+  public valor_iss:number= 0;
+  public credito:number = 0;
+  public municipio_prestacao_serviço:string ='';
+  
 
   public descricaoItem1: string = '';
   public quantidadeItem1: number= 1;
@@ -23,7 +44,9 @@ export class CadastrarNfsePage implements OnInit {
  
 
 
-  constructor() { }
+  constructor(
+    public requisicao_service:RequisicaoService
+  ) { }
 
   ngOnInit() {
   }
@@ -33,8 +56,24 @@ export class CadastrarNfsePage implements OnInit {
   }
   emitirNotaFiscal(){}
 
-  Add(){}
+  Add(){
+
+  }
   
+  emitirNota(){
+    const fd = new FormData();
+    fd.append('controller','nfse');
+    fd.append('datahora',String(this.dataHoraEmissao));
+    fd.append('numero_nota',String(this.numeroNota));
+
+    this.requisicao_service
+    .post(fd)
+    .subscribe(
+      () => {
+        
+      }      
+    );
+  }
 }
 
 
