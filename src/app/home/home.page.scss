@@ -11,8 +11,8 @@
 
   ion-content {
     --background: #ecf0f1; /* Cor de fundo do conteúdo */
-    display: flex;
-    flex-direction: column;
+    display: center;
+    flex-direction: center;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -22,19 +22,20 @@
 
   .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: center;
     justify-content: center;
     align-items: center;
-    vertical-align: auto;
-    ;
-    width: 100%;
+    vertical-align: center;
+    height: 10%;
+    width: 10%;
   }
 
   ion-button {
     margin: 10px 0;
     border-radius: 10px; /* Borda arredondada nos botões */
     font-weight: bold;
-    width: 40%; /* Define a largura dos botões, ajuste conforme necessário */
+    width: 100%; /* Define a largura dos botões, ajuste conforme necessário */
+    height: 100%;
   }
 
 
