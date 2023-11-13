@@ -8,18 +8,32 @@ import { RequisicaoService } from '../service/requisicao.service';
   styleUrls: ['./cadastrar-nfse.page.scss'],
 })
 export class CadastrarNfsePage implements OnInit {
-  public dataHoraEmissao: string='';
-  public numeroNota:number = 0;
+  public datahora: string='';
+  public numero_nota: number = 0;
   public emitenteNome: string= '';
   public destinatarioNome: string= '';
-  public cpnj: number= 0;
-  public cidade: string= '';
-  public uf: string = '';
-  public datahora:string ='';
-  public endereco:string= '';
-  public municipio:string='';
-  public inscricaomunicipal:string='';
-  public rns:string='';
+
+  public cpnj_ps: number= 0;
+  public cpnj_ts: number= 0;
+  public cpnj_inter: number= 0;
+ 
+  public uf_ps: number= 0;
+  public uf_ts: number = 0;
+
+  public endereco_ps:string= '';
+  public endereco_ts:string= '';
+
+
+  public municipio_ps:string='';
+  public municipio_ts:string='';
+  
+  public im_ps:string='';
+  public im_ts:string='';
+  
+  public rns_ps:string='';
+  public rns_ts:string='';
+  public rns_inter:string='';
+
   public discriminacao:string = '';
   public texto: string= '';
   public email: string='';
@@ -63,8 +77,12 @@ export class CadastrarNfsePage implements OnInit {
   emitirNota(){
     const fd = new FormData();
     fd.append('controller','nfse');
-    fd.append('datahora',String(this.dataHoraEmissao));
-    fd.append('numero_nota',String(this.numeroNota));
+    
+    fd.append('datahora',String(this.datahora));
+    fd.append('numero_nota',String(this.numero_nota));
+    fd.append('numero_nota',String(this.numero_nota));
+    fd.append('numero_nota',String(this.numero_nota));
+    fd.append('numero_nota',String(this.numero_nota));
 
     this.requisicao_service
     .post(fd)

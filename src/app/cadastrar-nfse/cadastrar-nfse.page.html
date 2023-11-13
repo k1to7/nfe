@@ -6,7 +6,7 @@
   </ion-header>
 
   <ion-content class="ion-padding">
-    <!-- <form #formulario="ngForm"> -->
+
       <ion-list>
         <!-- Data e Hora de Emissão -->
         <ion-card>
@@ -33,12 +33,24 @@
           <ion-card-content>
             <ion-item>
               <ion-label for="numeroNota">Número da Nota:</ion-label>
-              <ion-input type="text" id="numeroNota" name="numeroNota" required [(ngModel)]="numeroNota"></ion-input>
+              <ion-input type="text" id="numero_nota" name="numeroNota" required [(ngModel)]="numero_nota"></ion-input>
             </ion-item>
           </ion-card-content>
         </ion-card>
 
-        <!-- Dados do Emitente -->
+
+
+        <ion-card>
+        
+          <ion-card-content>
+            <ion-item>
+              <ion-label for="numeroNota">Número da Nota:</ion-label>
+              <ion-input type="text" id="numeroNota" name="numeroNota" required [(ngModel)]=""></ion-input>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Dados do Emitente 
         <ion-card>
           <ion-card-header>
             <ion-card-title>Dados do Emitente</ion-card-title>
@@ -48,11 +60,11 @@
               <ion-label for="emitenteNome">Nome do Emitente:</ion-label>
               <ion-input type="text" id="emitenteNome" name="emitenteNome" required [(ngModel)]="emitenteNome"></ion-input>
             </ion-item>
-            <!-- Outros campos do emitente aqui -->
+          
           </ion-card-content>
         </ion-card>
 
-        <!-- Dados do Destinatário -->
+        
         <ion-card>
           <ion-card-header>
             <ion-card-title>Dados do Destinatário</ion-card-title>
@@ -62,11 +74,11 @@
               <ion-label for="destinatarioNome">Nome do Destinatário:</ion-label>
               <ion-input type="text" id="destinatarioNome" name="destinatarioNome" required [(ngModel)]="destinatarioNome"></ion-input>
             </ion-item>
-            <!-- Outros campos do destinatário aqui -->
+          
           </ion-card-content>
-        </ion-card>
+        </ion-card> -->
 
-        <!-- Itens da Nota Fiscal -->
+        <!-- Itens da Nota Fiscal 
         <ion-card>
           <ion-card-header>
             <ion-card-title>Itens da Nota Fiscal</ion-card-title>
@@ -101,34 +113,23 @@
                   <span id="totalItem1">{{ totalItem1() }}</span>
                 </ion-col>
               </ion-row>
-              <!-- Adicione mais linhas para mais itens se necessário -->
+        
             </ion-grid>
             <ion-button (click)="Add()">Adicionar Produto</ion-button>
           </ion-card-content>
-        </ion-card>
+        </ion-card>-->
 
         <!-- Informações Fiscais -->
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Informações Fiscais</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <ion-item>
-              <ion-label for="cpf">CPF/CNPJ:</ion-label>
-              <ion-input type="text" id="cpf" name="cpnj" required [(ngModel)]="cpnj"></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-label for="cidade">Cidade:</ion-label>
-              <ion-input type="text" id="cidade" name="cidade" required [(ngModel)]="cidade"></ion-input>
-            </ion-item>
-            <!-- routerLink="/pendente" -->
+ 
+            
+            
             <ion-button
             (click)="emitirNota()"
             >Emitir Nota Fiscal</ion-button>
-          </ion-card-content>
-        </ion-card>
+         
+       
       </ion-list>
-    <!-- </form> -->
+
 
   </ion-content>
 </ion-content>
